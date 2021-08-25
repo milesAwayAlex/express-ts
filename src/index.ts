@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express from 'express';
 
 /**
  * This is a TypeScript file, it contains types
@@ -8,11 +8,11 @@ import express, { Request, Response } from "express";
  * 
  */
 
-const app = express();
+const app: express.Application = express();
 const port: number = 8000;
 const echo: string = "I'm a TypeScript app running in Node!"
 
-app.get("/", (req: Request, res: Response) => {
+app.get('/', (req: express.Request, res: express.Response) => {
     res.send(echo);
 });
 
